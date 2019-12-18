@@ -1,0 +1,27 @@
+{
+  "name": "school-games",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server/index.js",
+  "games": {
+    "dir": "client/games",
+    "repos": []
+  },
+  "scripts": {
+    "postinstall": "npm run db:reset",
+    "games:clean": "node scripts/games-clean",
+    "games:fetch": "node scripts/games-fetch",
+    "db:reset": "node scripts/db-reset",
+    "start": "node server/index",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "cookie-parser": "^1.4.4",
+    "express": "^4.17.1",
+    "sqlite": "^3.0.3",
+    "uuid": "^3.3.3"
+  }
+}
