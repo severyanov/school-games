@@ -23,6 +23,10 @@ app.get('/api/users', withUser, withAuth, (req, res) => {
     res.json(users.all);
 });
 
+app.get('/api/users/self', withUser, withAuth, (req, res) => {
+    res.json(req.user);
+});
+
 app.post('/api/users', withUser, (req, res) => {
     const name = req.body.name;
 

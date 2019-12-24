@@ -5,6 +5,12 @@ class User {
         this.id = uuid();
         this.name = name;
     }
+
+    toJSON() {
+        return {
+            name: this.name
+        };
+    }
 }
 
 class Users {
@@ -37,8 +43,7 @@ class Users {
     }
 
     get all() {
-        return Array.from(this.sessions.values())
-            .map(user => ({ name: user.name }));
+        return Array.from(this.sessions.values());
     }
 }
 

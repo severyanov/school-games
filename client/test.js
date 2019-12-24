@@ -34,6 +34,8 @@ const tests = {
       ['users'],
    'POST /users': () =>
       ['users', { name: `User${Date.now()}` }, 'POST'],
+   'GET /users/self': () =>
+      ['users/self'],
    'DELETE /users': () =>
       ['users', null, 'DELETE'],
 
